@@ -1,0 +1,13 @@
+---
+name: commoncontent
+---
+
+ContentController:
+  extensions:
+    - CommonContentControllerExtension
+    
+CommonContentAdmin:
+  managed_models:
+    CommonContentBlock:
+      title: Content Blocks
+
