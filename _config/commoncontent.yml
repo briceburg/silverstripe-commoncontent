@@ -10,4 +10,3 @@ CommonContentAdmin:
   managed_models:
     CommonContentBlock:
       title: Content Blocks
-

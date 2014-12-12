@@ -5,10 +5,26 @@ Manage Blocks of Common Content through ModelAdmin. Accessible with shortcodes.
 @todo documentation
 @todo shortcode handler
 
+DataObjects as CommonContent
 
-Say you have some items that don't extend content blocks, but seem naturally 
-managed through the "Common Content" area. No problem, use YAML; 
+```php
+<?php
 
+class Video extends DataObject
+{
+    private static $extensions = array(
+        'CommonContentExtension',
+        'SortableCommonContentExtension'
+    );
+
+    private static $db = array(
+        'YouTubeID' => 'Varchar',
+    );
+
+}
+```
+
+Managing classes not extended by CommonContentExtension from the Common Content ModelAdmin area: 
 ```yaml
 CommonContentAdmin:
   managed_models:
