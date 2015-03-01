@@ -45,8 +45,6 @@ class CommonContentExtension extends DataExtension
 
     public function updateCMSFields(FieldList $fields)
     {
-        $fields = parent::getCMSFields();
-
         if ($this->owner->Readonly) {
             $fields->replaceField('Title', new ReadonlyField('Title'));
         }
